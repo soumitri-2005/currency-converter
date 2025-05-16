@@ -1,0 +1,302 @@
+:root {
+  --background: rgb(245, 240, 232);
+  --bg-img: url("currencies_chiseled.png");
+  --form-bg: #f8a60d;
+  --select-bg: #6969708f;
+  --btn-bg: rgb(60, 68, 222);
+  --btn-hover-bg: rgb(34, 216, 64);
+  --btn-color: #f7f7f7;
+}
+
+[data-theme="dark"] {
+  --background: rgb(23, 27, 32);
+  --bg-img: url("currencies_chiseled 2.png");
+  --form-bg: #e0cc6e;
+  --select-bg: #6969708f;
+  --btn-bg: rgb(34, 216, 64);
+  --btn-hover-bg: rgb(43, 63, 246);
+  --btn-color: #141322;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", serif;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+  background-image: var(--bg-img);
+  gap: 15px;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: var(--form-bg);
+  padding: 2rem;
+  border-radius: 0.7rem;
+  min-height: 40vh;
+  width: 47vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container #title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 1.5rem;
+  text-shadow: 2px 2px #1f1e1e29;
+}
+
+form {
+  margin: 0 0.5rem;
+}
+
+form select,
+button,
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+form input {
+  font-size: 1rem;
+  height: 2.5rem;
+  padding-left: 0.5rem;
+}
+
+.dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.dropdown i {
+  font-size: 1.3rem;
+  margin: 1.4rem;
+  padding-top: 1.5rem;
+}
+
+.select-container img {
+  max-width: 2rem;
+  padding: 0 0.1rem 0 0.1rem;
+}
+
+.select-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  width: 6rem;
+  padding: 0.2rem 0.7rem;
+  background-color: var(--select-bg);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.select-container select {
+  font-size: 0.9rem;
+  margin: 0.1rem;
+  width: auto;
+  cursor: pointer;
+}
+
+form p {
+  font-weight: 600;
+  padding: 0 0.5rem 0.2rem 0.5rem;
+}
+
+.msg {
+  margin: 1rem 0 0.5rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form button {
+  height: 2.3rem;
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  font-size: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background-color: var(--btn-hover-bg);
+  color: rgb(8, 8, 86);
+  font-weight: 600;
+}
+
+/* From Uiverse.io by andrew-demchenk0 */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73c0fc;
+  transition: 0.4s;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.04);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  border-radius: 20px;
+  left: 3px;
+  top: 2.5px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: 0.4s;
+}
+
+.sun svg {
+  position: absolute;
+  top: 1.5px;
+  left: 26px;
+  z-index: 1;
+  width: 21px;
+  height: 21px;
+}
+
+.moon svg {
+  fill: #73c0fc;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+}
+
+/* .switch:hover */
+.sun svg {
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .switch:hover */
+.moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.input:checked + .slider {
+  background-color: #183153;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(24px);
+}
+@supports selector(:focus-visible) {
+  .theme__toggle:focus {
+    box-shadow: 0 0 0 0.125em var(--primaryT);
+  }
+
+  .theme__toggle:focus-visible {
+    box-shadow: 0 0 0 0.125em var(--primary);
+  }
+}
+
+@media (max-width: 460px) {
+  .container {
+    min-height: 30vh;
+    width: 40vh;
+  }
+  .container #title {
+    font-size: 1.2rem;
+  }
+  form select {
+    width: 70%;
+  }
+  form button {
+    width: 80%;
+  }
+  .dropdown i {
+    font-size: 1rem;
+    margin: 0.6rem;
+  }
+  .msg {
+    font-size: 1.2rem;
+  }
+  form button {
+    font-size: 0.9rem;
+  }
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .theme-switch {
+    --toggle-size: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    width: 36vh;
+  }
+  .msg {
+    font-size: 1rem;
+  }
+}
