@@ -6,6 +6,7 @@
   --btn-bg: rgb(60, 68, 222);
   --btn-hover-bg: rgb(34, 216, 64);
   --btn-color: #f7f7f7;
+  --footer-color: #000000;
 }
 
 [data-theme="dark"] {
@@ -13,9 +14,10 @@
   --bg-img: url("currencies_chiseled 2.png");
   --form-bg: #e0cc6e;
   --select-bg: #6969708f;
-  --btn-bg: red;
-  --btn-hover-bg: #50b32c;
+  --btn-bg: #ff6d00ed;
+  --btn-hover-bg: rgb(60, 68, 222);
   --btn-color: #141322;
+  --footer-color: #fff;
 }
 
 * {
@@ -257,6 +259,19 @@ form button:hover {
   .theme__toggle:focus-visible {
     box-shadow: 0 0 0 0.125em var(--primary);
   }
+}
+
+.footer {
+  color: var(--footer-color);
+  position: fixed;
+  bottom: 18px;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #f8a60d;
 }
 
 @media (max-width: 460px) {
