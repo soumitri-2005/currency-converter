@@ -13,8 +13,8 @@
   --bg-img: url("currencies_chiseled 2.png");
   --form-bg: #e0cc6e;
   --select-bg: #6969708f;
-  --btn-bg: rgb(34, 216, 64);
-  --btn-hover-bg: rgb(43, 63, 246);
+  --btn-bg: red;
+  --btn-hover-bg: #50b32c;
   --btn-color: #141322;
 }
 
@@ -126,6 +126,7 @@ form button {
   background-color: var(--btn-bg);
   color: var(--btn-color);
   font-size: 1rem;
+  font-weight: 600;
   border-radius: 1rem;
   cursor: pointer;
   margin-top: 0.5rem;
