@@ -83,6 +83,7 @@ const baseRatesUSD = {
   JOD: 0.71,
   JPY: 134,
   KES: 110,
+  KRW: 1320,
   KWD: 0.31,
   KZT: 480,
   LAK: 18800,
@@ -103,7 +104,6 @@ const baseRatesUSD = {
   MZN: 63,
   NAD: 18,
   NGN: 460,
-  NOK: 10,
   NPR: 131,
   NZD: 1.6,
   OMR: 0.38,
@@ -137,8 +137,6 @@ const baseRatesUSD = {
   VND: 24000,
   YER: 250,
   ZAR: 18,
-  ZMW: 21,
-  ZWL: 810,
 };
 
 function getRate(from, to) {
